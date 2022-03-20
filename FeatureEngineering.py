@@ -27,9 +27,7 @@ numeric_cols = ['authorized_flag',  'category_1', 'installments',
        'most_recent_sales_range', 'most_recent_purchases_range', 'category_4']
 categorical_cols = ['city_id', 'merchant_category_id', 'merchant_id', 'state_id', 'subsector_id']
 
-
-# In[ ]:
-
+# In[8]:
 
 # Create dictionary
 aggs = {}
@@ -67,7 +65,7 @@ test.to_csv(r'C:\Users\tianr\Desktop\interview\elo\test_groupby.csv', index=Fals
 gc.collect()
 
 
-# In[ ]:
+# In[9]:
 
 
 train = pd.merge(train_dict, train_groupby, how='left', on='card_id').fillna(0)
