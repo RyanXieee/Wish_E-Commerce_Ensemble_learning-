@@ -53,7 +53,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import GridSearchCV
 
 
-# In[ ]:
+# In[6]:
 
 
 def param_grid_search(train):
@@ -90,19 +90,19 @@ def param_grid_search(train):
 
 # 2.RandomForest
 
-# In[ ]:
+# In[7]:
 
 
 grid = param_grid_search(train_RF)
 
 
-# In[ ]:
+# In[8]:
 
 
 grid.best_estimator_.predict(test[features])
 
 
-# In[ ]:
+# In[9]:
 
 
 test['target'] = grid.best_estimator_.predict(test[features])
